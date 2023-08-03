@@ -85,32 +85,21 @@ function App() {
 
 
 
+  
 
-  //    ------------Adding Data to an array
+  //      -------Printing data
 
-  function addData(e) {
+  function printData(e) {
     e.preventDefault();
-    setIsprintData(false);
+    setIsprintData(true);
     setAddedData((addedData) => [
       ...addedData,
       [addContry, addState, selectedCity],
     ]);
-
-    setSelectedContry('')
-    setSelectedState("")
-    setSelectedCity("")
-    setAddContry("")
-    setAddState("")
+ 
   }
   console.log(addedData);
-
-
-  //      -------Printing data
-  function printData(e) {
-    e.preventDefault();
-    setIsprintData(true);
-  }
-
+   
   
   //    ------------checking city------------
   function noCity() {
@@ -129,15 +118,7 @@ function App() {
     return  setAddedData(updatedItems);
    }
 
-
-  //     ------------edit item--------------
-  // function editItem(e, ind){
-  //   e.preventDefault();
-  //   const updatedItems = addedData.filter((item, index) => index !== ind);
-   
-  //   return  setAddedData(updatedItems);
-  //  }
-
+ 
 
   //    ---------selecet contry data--------  
  function addContryData(e){
@@ -160,7 +141,7 @@ function addStatedata(e){
 
   return (
     <div className="city-locater">
-    <h2>WELCOME TO <span>CITY</span>LOCATOR<TravelExploreIcon /></h2>
+    <h2>WELCOME TO <span>  CITY</span>LOCATOR <TravelExploreIcon className="logo"/></h2>
     <div className="container"> 
                         {/*--------------- contry dropdown---------------- */}
                         <div className="all-dropdown"> 
@@ -219,18 +200,17 @@ function addStatedata(e){
       </div>
        
 
-      <div className="btns"> 
-      <button onClick={addData}>Add</button>
+      <div className="btns">  
       <button onClick={printData}>Print Data</button>
       </div> 
 
 
       <table>
-        <th>
+        <thead>
           <td>Country</td>
           <td>State</td>
           <td>City</td>
-        </th>
+        </thead>
         {isprintData &&
           addedData.map((item, index) => {
             return (
@@ -238,7 +218,7 @@ function addStatedata(e){
                 <td>{item[0]}</td>
                 <td>{item[1]}</td>
                 <td>{item[2]}</td> 
-                <tr> <button onClick={(e) =>deleteItem(e, index)}><DeleteIcon /></button></tr>
+                <td id="deleteIcon"> <button onClick={(e) =>deleteItem(e, index)}><DeleteIcon /></button></td>
                 {/* <tr> <button onClick={(e) =>editItem(e, index)}>/</button></tr> */}
               </tr>
             );

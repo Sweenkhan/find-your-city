@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .city-locater{
@@ -27,7 +28,7 @@ h2{
 } 
 
 h2 span{
-    color: #1e130c;
+    color: #fffcfa75;
 }
 
 .container{
@@ -44,7 +45,7 @@ h2 span{
 }
  
 .all-dropdown{
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -71,8 +72,54 @@ h2 span{
 .btns{
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: flex-end;
+   width: 100%
+}
 
+.btns button{
+    margin: 15px 10px;
+    width: 90px;
+    height: 30px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: none;
+}
+
+
+table{
+    width: 60%; 
+    border: 2px solid rgb(250, 243, 243);
+}
+
+tr, td{
+    border: 1px solid black;
+    color: white;
+     
+}
+
+table thead td{ 
+    text-align: center;
+    font-size: 1.2rem; 
+    height: 40px;
+    color: yellow;
+}
+ 
+table tr{ 
+    height: 30px;
+}
+  
+table tr td{ 
+    width: 30%;
+    height: 20px;
+    padding-left: 7px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#deleteIcon{
+    padding-right: 5px;
+    border: none;
+    margin-right: 5px;
 }
 
 
