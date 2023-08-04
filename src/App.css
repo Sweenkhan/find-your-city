@@ -25,7 +25,15 @@ h2{
     font-size: 2rem;
     color: white;
     font-weight: 600;
+    padding-bottom: 3px;
+    border-bottom: 2px solid yellow;
+    text-align: center;
 } 
+
+h2 .logo{
+   color: yellow;
+   size: 2rem;
+}
 
 h2 span{
     color: #fffcfa75;
@@ -46,6 +54,7 @@ h2 span{
  
 .all-dropdown{
     width: 90%;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -70,6 +79,7 @@ h2 span{
 }
 
 .btns{
+    margin-top: 1rem;
    display: flex;
    align-items: center;
    justify-content: flex-end;
@@ -83,12 +93,20 @@ h2 span{
     font-size: 1rem;
     border-radius: 20px;
     border: none;
+    transition: all 0.4s linear;
 }
+
+.btns button:hover{
+   color: white;
+   background-color: black;
+} 
 
 
 table{
+    margin-top: 1rem;
     width: 60%; 
     border: 2px solid rgb(250, 243, 243);
+    border-radius: 5px;
 }
 
 tr, td{
@@ -102,6 +120,7 @@ table thead td{
     font-size: 1.2rem; 
     height: 40px;
     color: yellow;
+    border-radius: 2px;
 }
  
 table tr{ 

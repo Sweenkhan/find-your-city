@@ -141,7 +141,7 @@ function addStatedata(e){
 
   return (
     <div className="city-locater">
-    <h2>WELCOME TO <span>  CITY</span>LOCATOR <TravelExploreIcon className="logo"/></h2>
+    <h2>WELCOME TO <span>  CITY</span>LOCATOR <TravelExploreIcon className="logo" sx={{ fontSize: 30 }}/></h2>
     <div className="container"> 
                         {/*--------------- contry dropdown---------------- */}
                         <div className="all-dropdown"> 
