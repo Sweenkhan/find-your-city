@@ -61,7 +61,7 @@ h2 span{
      position: absolute;
      z-index: 2;
      border: none;
-    width: 55%;
+    width: 60%;
     box-shadow: 0px 0px 15px 2px rgb(44, 44, 44);
     border-radius: 5px;
     display: flex;
@@ -84,15 +84,19 @@ h2 span{
     
 }
 
-.all-dropdown .one, .two, .three{ 
-
+.all-dropdown .one, .two, .three{   
    font-size: 1.2rem;
    margin: 5px 5px;
    padding: 2px 8px;
    border-radius: 15px;
+   transition: all 0.3s linear;
 }
- 
 
+ select:hover{
+   background-color: black;
+   color: white; 
+}
+  
 
 .btns{
     margin-top: 1rem;
@@ -132,25 +136,20 @@ thead td{
      
 }
 thead td:hover{
-background-color:gray ;
+background-color:gray;
+cursor: pointer;
 }
 
 table thead td{ 
     text-align: center;
     font-size: 1.2rem; 
-    height: 40px;
+    padding: 5px;
     color: rgb(4, 26, 18);
     border-radius: 2px;
 }
  
-table tr{ 
-    /* height: 30px; */
-}
   
-table tr td{ 
-    /* width: 30%; */
-    /* height: 20px; */
-    padding-left: 7px;
+table tr td{  
     background-color: rgb(39, 37, 37);
     color: white;
     text-align: center;
@@ -160,10 +159,8 @@ table tr td:hover{
     background-color: rgb(85, 85, 85);
 }
 
-#deleteIcon{
-    padding-right: 5px;
-    border: none;
-    margin-right: 5px;
+#deleteIcon{ 
+    border: none; 
     background-color: none;
 }
 
@@ -172,3 +169,29 @@ table tr td:hover{
 }
 
 
+/*---------------------------responsive design -----------------------*/
+
+ 
+@media screen and (max-width: 700px){
+    .container{
+        width: 60%;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    h2 .logo{
+        font-size: 25px;
+    }
+
+    .all-dropdown .one, .two, .three{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .container{
+        width: 90%;
+    }
+}

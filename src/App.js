@@ -81,28 +81,33 @@ function App() {
       });
   }, [selectedState]);
 
-  //      -------Printing data
 
+  //      -------Printing data 
   function printData(e) {
-    e.preventDefault();
-    setIsprintData(true);
+    setIsprintData(true)
+    e.preventDefault(); 
     setAddedData((addedData) => [
       ...addedData,
       [addContry, addState, selectedCity],
     ]);
+    setSelectedContry("")
+    setSelectedState("")
+    setSelectedCity("")
   }
   console.log(addedData);
 
-  //    ------------checking city------------
+
+  //    ------------checking city ------------
   function noCity() {
     if (cites.length === 0) {
       setSelectedCity("NA");
       alert("there is no city!");
     }
   }
+ 
 
   //   -----------delete Item----------------
-  function deleteItem(e, ind) {
+  function deleteItem(e, ind) {  
     e.preventDefault();
     const updatedItems = addedData.filter((item, index) => index !== ind);
 
@@ -111,7 +116,7 @@ function App() {
 
   //    ---------selecet contry data--------
   function addContryData(e) {
-    e.preventDefault();
+    e.preventDefault(); 
     let seperate = e.target.value.split(" ");
 
     setAddContry(seperate.slice(1).join(""));
@@ -120,9 +125,8 @@ function App() {
 
   //   ---------selected state data ----------------
   function addStatedata(e) {
-    e.preventDefault();
-    let seperate = e.target.value.split(" ");
-
+    e.preventDefault();   
+    let seperate = e.target.value.split(" "); 
     setAddState(seperate.slice(1).join(""));
     setSelectedState(seperate.slice(0, 1).join(""));
   }
@@ -139,8 +143,8 @@ function App() {
         <div className="all-dropdown">
           <select
             className="one"
-            onChange={addContryData}
-            defaultValue="placeholder"
+            onChange={addContryData} 
+            defaultValue= "placeholder"  
           >
             <option value="placeholder" defaultChecked disabled>
               Choose Contry
@@ -180,7 +184,7 @@ function App() {
             onChange={(e) => setSelectedCity(e.target.value)}
           >
             <option value="placeholder" defaultChecked disabled>
-              select City
+              Select City
             </option>
 
             {cites.map((city, index) => {
