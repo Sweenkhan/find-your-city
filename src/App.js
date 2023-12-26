@@ -96,7 +96,6 @@ function App() {
   }
   console.log(addedData);
 
-
   //    ------------checking city ------------
   function noCity() {
     if (cites.length === 0) {
